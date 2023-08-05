@@ -732,11 +732,11 @@ if not ospath.exists('accounts'):
     config_dict['USE_SERVICE_ACCOUNTS'] = False
 sleep(0.5)
 
-aria2 = ariaAPI(ariaClient(host="http://localhost", port=8080, secret=""))
+aria2 = ariaAPI(ariaClient(host="http://localhost", port=9000, secret=""))
 
 
 def get_client():
-    return qbClient(host="localhost", port=8080, VERIFY_WEBUI_CERTIFICATE=False, REQUESTS_ARGS={'timeout': (30, 60)})
+    return qbClient(host="localhost", port=9000, VERIFY_WEBUI_CERTIFICATE=False, REQUESTS_ARGS={'timeout': (30, 60)})
 
 
 def aria2c_init():
